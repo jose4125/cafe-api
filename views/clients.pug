@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Pantalla del publico
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(rel='stylesheet', href='stylesheets/style.css')
+  // <body class="container">
+  body
+    table
+      tbody
+        tr
+          td.ticket-actual(valign='middle')
+            span#lblTicket1.ticket-actual-numero waiting...
+            br
+            span#lblDesktop1.ticket-actual-escritorio
+          td
+            table
+              tbody
+                tr
+                  td
+                    span#lblTicket2.ticket-secundario waiting...
+                    br
+                    span#lblDesktop2
+                tr
+                  td
+                    span#lblTicket3.ticket-secundario waiting...
+                    br
+                    span#lblDesktop3
+                tr
+                  td
+                    span#lblTicket4.ticket-secundario waiting...
+                    br
+                    span#lblDesktop4
+
+  script(src="javascripts/libs/jquery.min.js")
+  script(src="socket.io/socket.io.js")
+  script(src="javascripts/socket-clients.js")
