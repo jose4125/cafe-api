@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Programa de Colas
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+  body.container
+    h1 Programa de Colas
+    .row
+      .col-6
+        a.btn.btn-primary(href='clients') Pantalla publica
+        a.btn.btn-secondary(href='new-ticket') Crear Tickets
+      .col-6
+        form(action='desktop')
+          input.form-control(name='desktop', type='number', placeholder='desktop', autofocus='', required='')
+          br
+          button.btn.btn-primary(type='submit')
+            | Ingresar
+  script(src="socket.io/socket.io.js")
+  script(src="javascripts/socket-client.js")

@@ -8,6 +8,8 @@ block content
   a(class='google-btn' href='/auth/googleplus') Google+
   hr
   a(href='#', onclick='signOut();') Sign out
+  script(src="socket.io/socket.io.js")
+  script(src="javascripts/socket-client.js")
   script.
     function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();

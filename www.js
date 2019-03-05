@@ -7,6 +7,8 @@
 import app from './app';
 import debug from 'debug';
 import http from 'http';
+import socketIO from 'socket.io';
+
 import { config } from './config/config';
 
 debug('cafe:server');
@@ -24,6 +26,8 @@ app.set('port', port);
  */
 
 const server = http.createServer(app);
+export const io = socketIO(server);
+require('./sockets/socket');
 
 /**
  * Listen on provided port, on all network interfaces.
