@@ -28,6 +28,7 @@ app.set('port', port);
 const server = http.createServer(app);
 export const io = socketIO(server);
 require('./sockets/socket');
+require('./sockets/socket-chat');
 
 /**
  * Listen on provided port, on all network interfaces.
