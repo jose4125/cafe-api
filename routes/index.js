@@ -11,6 +11,7 @@ import ticketsRouter from './tickets';
 import publicClientsRouter from './clients';
 import desktopRouter from './desktop';
 import newTicketRouter from './new-ticket';
+import chatRouter from './chat';
 import checkAuth from '../middlewares/check-authentication';
 
 let app = express();
@@ -26,5 +27,6 @@ app.use('/tickets', ticketsRouter);
 app.use('/clients', publicClientsRouter);
 app.use('/desktop', desktopRouter);
 app.use('/new-ticket', newTicketRouter);
+app.use('/chat', chatRouter);
 
 export default app;
